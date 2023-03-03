@@ -1,0 +1,68 @@
+body{
+    background-color: #06f7ba;
+    font-weight: bold;
+    font-family: 'Bungee';
+}
+
+h1 {
+    font-size: 2em;
+    color: black;
+    font-weight: bold;
+    text-align: center;
+}
+
+img{
+    margin: 2% 220px;
+}
+
+.pdescri{
+    font-family: 'Roboto Mono';
+}
+
+/*Estilo para header */
+.lidescri{
+    font-size: 15;
+    text-align: right;
+    list-style: none;
+    display: inline;
+    color:#001018;
+    margin: 2% 4%;
+}
+
+.lidescri:hover{
+    color: hotpink;
+}
+
+#menudown{
+    text-align:center;
+    padding: 0;
+    background-color: #21E7F7;
+    
+}
+
+a{
+    text-decoration: none;
+    color: #000;
+}
+
+a:hover{
+    color: hotpink;
+}
+
+fieldset{
+    width: 100%;
+    border: 2px solid black;
+}
+
+legend{
+    margin: 1% 5%;
+    background-color: #06f7ba;
+    border: 25px solid #06f7ba;
+    font-size: 21px;
+}
+
+p{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 1% 2%;
+    column-count: 2;
+}

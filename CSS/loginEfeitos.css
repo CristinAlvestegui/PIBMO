@@ -1,0 +1,86 @@
+/* IN PROGRESS*/
+body{
+    background-color: #06f7ba;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    font-size: 15;
+    font-family: 'Bungee';
+    margin: 0;
+    padding: 0;
+}
+
+/*Estilo para header */
+
+ul{
+    text-align:center;
+    padding: 0;
+    background-color: #21E7F7;
+    height: 60px;
+    padding-top: 15px;
+}
+
+li{
+    font-size: 15;
+    text-align: center;
+    list-style: none;
+    display: inline;
+    color:#000;
+    margin: 3%;
+}
+
+/* Estilos para DropDown */
+
+.dropLogin{
+    position: relative;
+}
+
+.hide{
+    display: none;
+    position: absolute;
+    background-color: #21E7F7;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    width: 100px;
+    height: 170px;
+    margin-top: 0cm;
+    z-index: 1;
+    transform: translateX(25.7cm);
+}
+
+.hide li:hover{
+    background-color: hsla(169, 78%, 80%, 0.596);
+    border-radius: 15px;
+}
+
+.dropLogin:hover .hide{
+    display: block;
+}
+
+/*FIM Estilos para DropDown */
+
+
+/*FIM Estilo para header */
+
+a{
+    text-decoration: none;
+    color: #000;
+}
+
+a:hover{
+    color: hotpink;
+}
+
+h5{
+    text-align:left
+}
+
+fieldset{
+    width: 50%;
+    margin: 3% auto;
+    border-radius: 15px;
+    border: solid 3px #336c5e;
+    padding: 10px 35px;
+    background-image: url(../fotos/bmoMensal.jpg);
+    background-position: right;
+    background-size: contain;
+    background-repeat: no-repeat;
+}

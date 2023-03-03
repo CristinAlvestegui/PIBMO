@@ -1,0 +1,109 @@
+body{
+    background-color: #06f7ba;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    font-size: 15;
+    font-family: 'Bungee';
+    margin: 0;
+    padding: 0;
+}
+
+/*Estilo para header */
+
+ul{
+    text-align:center;
+    padding: 0;
+    background-color: #21E7F7;
+    height: 60px;
+    padding-top: 15px;
+}
+
+li{
+    font-size: 15;
+    text-align: center;
+    list-style: none;
+    display: inline;
+    color:#000;
+    margin: 3%;
+}
+
+/*FIM Estilo para header */
+
+a{
+    text-decoration: none;
+    color: #000;
+}
+
+a:hover{
+    color: hotpink;
+}
+
+/* Estilos para DropDown */
+
+/*.dropLogin{
+    
+    position: relative;
+    display: inline-block;
+}*/
+
+.hide{
+    /*display: none;
+    position: absolute;*/
+    background-color: #21E7F7;
+    width: 100px;
+    height: 170px;
+    transform: translateX(25.5cm);
+}
+
+.dropLogin:hover{
+    display:inline-block;
+    /*chamar classe hide para appear? */
+}
+
+/*FIM Estilos para DropDown */
+
+fieldset{
+    width: 50%;
+    margin: 3% auto;
+    border-radius: 15px;
+    border: solid 3px #336c5e;
+    padding: 10px 35px;
+    background-image: url(../fotos/Carrosel/carroselUm.jpg);
+    background-position: right;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+legend{
+    font-size: 24px;
+    font-weight: bold;
+    margin: 4% 4%;
+}
+
+label{
+    background-color: hsla(160, 23%, 87%, 0.731);
+    border-radius: 10px;
+    margin-right: 5px;
+    padding: 1%;
+}
+
+input{
+    border-style: solid double;
+    height: 25px;
+    border-radius: 10px;
+}
+
+#endereco{
+    width: 400px;
+}
+
+#btn{
+    width: 3cm;
+    background-color: hsl(53, 100%, 61%, 0.8);
+    border: 2px double yellow;
+}
+
+#btn:hover{
+    background-color: hsl(53, 100%, 61%);
+    
+}
