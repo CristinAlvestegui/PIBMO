@@ -2,6 +2,56 @@ html{
     scroll-behavior: smooth;
 }
 
+/*Estilos para header*/
+
+ul{
+    text-align: center;
+    padding: 0;
+    background-color: #21E7F7;
+    height: 60px;
+    padding-top: 15px;
+}
+
+li{
+    font-size: 15;
+    text-align: center;
+    list-style: none;
+    display: inline;
+    color: #000;
+    margin: 3%;
+}
+
+/*Estilos de DropDown*/
+.dropLogin{
+    position: relative;
+}
+
+.hide{
+    display: none;
+    position: absolute;
+    background-color: #21E7F7;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    width: 100px;
+    height: 170px;
+    margin-top:  0cm;
+    z-index: 1;
+    transform: translateX(31cm);
+}
+
+.hide li:hover{
+    background-color: hsla(169, 78%, 80%, 0.596);
+    border-radius: 15px;
+}
+
+.dropLogin:hover .hide{
+    display: block;
+}
+
+/*Fim dos estilos para efeito Drop Down*/
+
+/*Fim estilo para Header*/
+
+
 body{
     background-color: #06f7ba;
     background-attachment: fixed;

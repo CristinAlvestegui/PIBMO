@@ -49,7 +49,7 @@
                 <ul>
                     <li><a href="../../index.php">Inicio</a></li>
                     <li><a href="#produtos">Produtos</a></li>
-                    <li><a href="index.html#downloads">Downloads</a></li>
+                    <li><a href="../../index.php#downloads">Downloads</a></li>
                     <li><a href="https://asvbmo.azurewebsites.net/">News</a></li>
                     <li><a href="sobre.html">Sobre</a></li> 
                 </ul>
@@ -78,14 +78,16 @@
 
                 <input type="checkbox" id="termos"><!--aqui devemos colocar uma regra para somente enviar o forumulário if checkbox is marked!-->
                 <label for="termos">concordo com a politica de privacidade</label><br><br>
-                <input type="submit" onclick="cadastrar()" id="btn"></input>
+                <input type="submit" name="enviar" onclick="cadastrar()" id="btn"></input>
             </form>
         </fieldset>        
     </body>
 </html>
 
 <?php
-    $connect = new Conexao();
-    $inn = new Inserir();
-    echo $inn-> cadastrar($connect, "cadastro", $_GET['cpf'], $_GET['nome'], $_GET['usuario'], $_GET['senha'], $_GET['email'], $_GET['dataNasci']);
+    if(isset($_POST['enviar'])){
+        $connect = new Conexao();
+        $inn = new Inserir();
+        echo $inn-> cadastrar($connect, "cadastro", $_GET['cpf'], $_GET['nome'], $_GET['usuario'], $_GET['senha'], $_GET['email'], $_GET['dataNasci']);
+    }
 ?>

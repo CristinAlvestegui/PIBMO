@@ -46,18 +46,18 @@
 
             <nav>
                 <ul>
-                    <li><a href="index.html">Inicio</a></li>
-                    <li><a href="index.html#produtos">Produtos</a></li>
-                    <li><a href="index.html#downloads">Downloads</a></li>
+                    <li><a href="index.php">Inicio</a></li>
+                    <li><a href="index.php#produtos">Produtos</a></li>
+                    <li><a href="index.php#downloads">Downloads</a></li>
                     <li><a href="https://asvbmo.azurewebsites.net/">News</a></li>
-                    <li><a href="sobre.html">Sobre</a></li><!--Página de Wordpress--> 
+                    <li><a href="https://asvbmo.azurewebsites.net/docs">Sobre</a></li><!--Página de Wordpress--> 
                     <li class="dropLogin">
-                        <a>Entrar</a>
+                        <a href="Login.php">Entrar</a>
                         <ul class="hide">
                             <li><a href="#">Perfil</a></li>
                             <li><a href="#">Suporte</a></li>
                             <li><a href="#">Alterar</a></li>
-                            <li><a href="index.html">Sair</a></li>
+                            <li><a href="index.php">Sair</a></li>
                         </ul>
                     </li>   
                 </ul>
