@@ -6,7 +6,7 @@
     use BMO\ASVBMOSite\PHP\Modelo\DAO\Conexao;
 
     class Login{
-        public function logar(Conexao $Connect, string $usuario, string $senha){
+        public function logar(Conexao $Connect, string $cadastro, string $usuario, string $senha){
             try{
                 $conn = $Connect->conectar();
                 $sql = "select * from  cadastro where usuario = '$usuario' and senha = '$senha'";
@@ -39,7 +39,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <!--Efeitos-->
-        <link rel="stylesheet" type="text/css" href="../CSS/loginEfeitos.css">
+        <link rel="stylesheet" type="text/css" href="../../../CSS/loginEfeitos.css">
         
         <!--Fontes-->
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -72,14 +72,6 @@
             </nav>
         </header>
 
-        <?php
-            if(isset($_GET['user'], $_GET['senha'])){
-                if($_GET['user'] == $usuario && $_GET['senha'] == $senha){
-
-                }
-            }
-        ?>
-
         <div>
             <fieldset>
                 <h5>Já tem Cadastro?</h5>
@@ -93,8 +85,17 @@
 
                 <a href="">Esqueceu a senha?</a><br>
                 <label>Sou novo aqui</label>
-                <a id="novoUser" href="../PHP/Modelo/DAO/inserir.php">Cadastrar</a>
+                <a id="novoUser" href="Inserir.php">Cadastrar</a>
             </fieldset>
         </div>
+
+        <?php
+            if(isset($_GET['logar'])){
+                $conex = new Conexao();
+                $entrar = new Login();
+                echo $entrar->logar($conex, "cadastro", $_GET['user'], $_GET['senha']);
+            }
+
+        ?>
     </body>
 </html>

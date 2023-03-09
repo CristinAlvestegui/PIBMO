@@ -52,19 +52,18 @@
                     <li><a href="https://asvbmo.azurewebsites.net/">News</a></li>
                     <li><a href="https://asvbmo.azurewebsites.net/docs">Sobre</a></li><!--Página de Wordpress--> 
                     <li class="dropLogin">
-                        <a href="Login.php">Entrar</a>
+                        <a href="../PHP/Modelo/DAO/Login.php">Entrar</a>
                         <ul class="hide">
                             <li><a href="#">Perfil</a></li>
                             <li><a href="#">Suporte</a></li>
                             <li><a href="#">Alterar</a></li>
-                            <li><a href="index.php">Sair</a></li>
+                            <li><a href="index.php">Sair</a></li><!--aqui vamos vamos sair da sessão de login-->
                         </ul>
                     </li>   
                 </ul>
             </nav>
         </header>
 
-        <!--Imagem grande com animação em Java Script-->
 
         <div id="produtos" class="grid-container">
 
