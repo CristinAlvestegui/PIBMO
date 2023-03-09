@@ -6,10 +6,11 @@
     use BMO\ASVBMOSite\PHP\Modelo\DAO\Conexao;
 
     class Inserir{
-        public function cadastrar(Conexao $conex, string $cadastro, string $CPF, string $nome, string $usuario, string $senha, string $email, date $dataNasci){
+        
+        public function cadastrar(Conexao $conex, string $CPF, string $nome, string $usuario, string $senha, string $email, $dataNasci){
             try{
                 $conn = $conex->conectar();
-                $sql  = "insert into $cadastro (CPF, nome, usuario, senha, email, dataNasci) values ($CPF, $nome, $usuario, $senha, $email, $dataNasci)";
+                $sql  = "insert into cadastro (CPF, nome, usuario, senha, email, dataNasci) values ($CPF, $nome, $usuario, $senha, $email, $dataNasci)";
                 $result = mysqli_query($conn, $sql);
                 myslqi_close($conn);
                 if($result){
@@ -20,7 +21,18 @@
                 echo "$erro";
             }//Fim do try catch
         }//FIm do método cadastrar
-    }//Fim da classe Inserir
+
+        public function trataData(string $data){
+            $data = $_GET['dataNasci']
+            $divi = explode('/', $data);
+            $dia = $divi[0];
+            $mes = $divi[1];
+            $ano = $divi[2];
+            $dataSql = array_reverse($divi);
+            //$dataNasc = $ano.'-'.$mes.'-'.$dia;
+            //= date("Y-m-d");//formato que devemos enviar para sql?
+        }
+    }//Fim da classe Inserir 
 ?>
 
 <!DOCTYPE html>
@@ -51,14 +63,14 @@
                     <li><a href="#produtos">Produtos</a></li>
                     <li><a href="../../index.php#downloads">Downloads</a></li>
                     <li><a href="https://asvbmo.azurewebsites.net/">News</a></li>
-                    <li><a href="sobre.html">Sobre</a></li> 
+                    <li><a href="https://asvbmo.azurewebsites.net/docs">Sobre</a></li> 
                 </ul>
             </nav>
         </header>
 
         <fieldset>
             <legend>Novo Usuário</legend>
-            <form action="../PHP/cadastro.php" method="GET">
+            <form action="Inserir.php" method="GET">
                 <!--Dados Pessoais-->
                 <label for="nome">Nome Completo:</label>
                 <input type="text" id="nome" name="nome" /><br><br>
@@ -66,9 +78,8 @@
                 <input type="text" id="login" name="usuario" ><br><br>
                 <label for="cpf">C.P.F:</label>
                 <input type="text" id="cpf" name="cpf" placeholder="XXX.XXX.XXX-XX" /><br><br>
-                <label for="dataNasci">Data de Nascimiento:</label>
-                <input name="dataNasci"type="date" id="dataNasci" class="estiloInput"  placeholder="DD/MM/AA" /><br><br>
-        
+                <label for="dataNasci">Data de Nascimento:</label>
+                <input name="dataNasci" type="date" id="dataNasci" class="estiloInput"  placeholder="DD-MM-AAAA" /><br><br>
                 <label for="senha">Senha:</label>
                 <input type="password" id="senha" name="senha" ><br><br>
 
@@ -78,16 +89,22 @@
 
                 <input type="checkbox" id="termos"><!--aqui devemos colocar uma regra para somente enviar o forumulário if checkbox is marked!-->
                 <label for="termos">concordo com a politica de privacidade</label><br><br>
-                <input type="submit" name="enviar" onclick="cadastrar()" id="btn"></input>
+                <input type="submit" name="enviar" id="btn"></input>
             </form>
         </fieldset>        
     </body>
 </html>
 
 <?php
-    if(isset($_POST['enviar'])){
+    $inn = new Inserir();
+    echo $inn->trataData();
+
+    $data = date("Y-m-d");
+    $data = date_create($_GET['dataNasci']);
+
+    if(isset($_GET['enviar'])){
         $connect = new Conexao();
         $inn = new Inserir();
-        echo $inn-> cadastrar($connect, "cadastro", $_GET['cpf'], $_GET['nome'], $_GET['usuario'], $_GET['senha'], $_GET['email'], $_GET['dataNasci']);
+        echo $inn-> cadastrar($connect, $_GET['cpf'], $_GET['nome'], $_GET['usuario'], $_GET['senha'], $_GET['email'], trataData($_GE['dataNasci']) );
     }
 ?>
