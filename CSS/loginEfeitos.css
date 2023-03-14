@@ -43,7 +43,7 @@ li{
     height: 170px;
     margin-top: 0cm;
     z-index: 1;
-    transform: translateX(25.7cm);
+    transform: translateX(31.2cm);
 }
 
 .hide li:hover{
@@ -83,4 +83,39 @@ fieldset{
     background-position: right;
     background-size: contain;
     background-repeat: no-repeat;
+}
+
+@media screen and (max-width: 900px){
+    .hide{
+        display: none;
+        position: absolute;
+        background-color: #21E7F7;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        width: 100px;
+        height: 170px;
+        margin-top: 0cm;
+        z-index: 1;
+        transform: translateX(16.2cm);
+    }
+}
+
+@media screen and (max-width: 450){
+    .hide{
+        display: none;
+        position: absolute;
+        background-color: #21E7F7;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        width: 100px;
+        height: 170px;
+        margin-top: 0cm;
+        z-index: 1;
+        transform: translateX(1cm);
+    }
+
+    label{
+        background-color: hsla(160, 23%, 87%, 0.731);
+        border-radius: 10px;
+        margin-right: 5px;
+        padding: 1%;
+    }
 }

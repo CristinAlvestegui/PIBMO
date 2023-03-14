@@ -7,10 +7,10 @@
 
     class Inserir{
         
-        public function cadastrar(Conexao $conex, string $CPF, string $nome, string $usuario, string $senha, string $email, $dataNasci){
+        public function cadastrar(Conexao $conex, string $CPF, string $nome, string $usuario, string $senha, string $email, ){
             try{
                 $conn = $conex->conectar();
-                $sql  = "insert into cadastro (CPF, nome, usuario, senha, email, dataNasci) values ($CPF, $nome, $usuario, $senha, $email, $dataNasci)";
+                $sql  = "insert into cadastro (CPF, nome, usuario, senha, email) values ($CPF, $nome, $usuario, $senha, $email,)";
                 $result = mysqli_query($conn, $sql);
                 myslqi_close($conn);
                 if($result){
@@ -22,16 +22,29 @@
             }//Fim do try catch
         }//FIm do método cadastrar
 
-        public function trataData(string $data){
-            $data = $_GET['dataNasci']
-            $divi = explode('/', $data);
-            $dia = $divi[0];
-            $mes = $divi[1];
-            $ano = $divi[2];
-            $dataSql = array_reverse($divi);
-            //$dataNasc = $ano.'-'.$mes.'-'.$dia;
-            //= date("Y-m-d");//formato que devemos enviar para sql?
+        public function trataData(string $dataNasci){
+            $dataNasci = $_GET['dataNasci'];
+            $divi = explode('-', $dataNasci);//explode não esta funcionando!!!!!!@@!!
+            $dia = var_dump(isset($divi[0]));
+            $mes = var_dump(isset($divi[1]));
+            $ano = var_dump(isset($divi[2]));
+            //$dataSql = array_reverse($divi);
+            $dataNasci = $ano.'-'.$mes.'-'.$dia;
+            //$dataNasci = date("Y-m-d");//formato que devemos enviar para sql?
+            //print_r($divi);  
         }
+
+        public function odeioData(){
+            $dados = filter_input_array(INPUT_GET, FILTER_DEFAULT);
+
+            if(!empty($dados['enviar'])){
+                var_dump($dados);
+                $query = "insert into cadastro(dataNasci) values (:dataNasci)";
+                $cad = $connect->prepare($query);
+                $cad->bindParam(':dataNasci', $dados['dataNasci']);
+                $cad->execute();
+            }//Fim do if
+        }//Fim da função para tentar inserir data
     }//Fim da classe Inserir 
 ?>
 
@@ -68,6 +81,10 @@
             </nav>
         </header>
 
+        <?php
+           
+        ?>
+
         <fieldset>
             <legend>Novo Usuário</legend>
             <form action="Inserir.php" method="GET">
@@ -79,7 +96,7 @@
                 <label for="cpf">C.P.F:</label>
                 <input type="text" id="cpf" name="cpf" placeholder="XXX.XXX.XXX-XX" /><br><br>
                 <label for="dataNasci">Data de Nascimento:</label>
-                <input name="dataNasci" type="date" id="dataNasci" class="estiloInput"  placeholder="DD-MM-AAAA" /><br><br>
+                <input name="dataNasci" type="date" id="dataNasci" class="estiloInput"/><br><br>
                 <label for="senha">Senha:</label>
                 <input type="password" id="senha" name="senha" ><br><br>
 
@@ -97,14 +114,22 @@
 
 <?php
     $inn = new Inserir();
-    echo $inn->trataData();
+    //echo $inn->trataData($dataNasc);
 
-    $data = date("Y-m-d");
-    $data = date_create($_GET['dataNasci']);
+    //$data = date("Y-m-d");
+    //$data = date_create($_GET['dataNasci']);
 
+    $dataNasci = "";
+    if(isset($dados['dataNasci'])){
+        $dataNasci = $dados['dataNasci'];
+    }
     if(isset($_GET['enviar'])){
         $connect = new Conexao();
         $inn = new Inserir();
-        echo $inn-> cadastrar($connect, $_GET['cpf'], $_GET['nome'], $_GET['usuario'], $_GET['senha'], $_GET['email'], trataData($_GE['dataNasci']) );
+        //$dataVai = $inn-> trataData($_GET['dataNasci']);
+        $dataVai = $inn-> odeioData($_GET['dataNasci']);
+        //echo $dataVai;
+        echo $inn-> cadastrar($connect, $_GET['cpf'], $_GET['nome'], $_GET['usuario'], $_GET['senha'], $_GET['email'], $dataVai);
+        
     }
 ?>

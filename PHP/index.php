@@ -130,7 +130,7 @@
 
         <div id="downloads">
 
-            <fieldset>
+            <fieldset><!--Verder oscuro-->
                 <h4 class="tituDown">Downloads</h4>
                 <fieldset id="fielDown">
                     <img width="55px" src="../fotos/icones/bmo/256px.png"><span class="pdescri"><p>macos</p></span><!--em desenvolvimento, o link não é funcional-->

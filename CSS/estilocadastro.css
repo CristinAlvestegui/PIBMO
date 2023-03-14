@@ -107,3 +107,23 @@ input{
     background-color: hsl(53, 100%, 61%);
     
 }
+
+/* Efeitos para págian responsivas */
+@media screen and (max-width: 900px){
+    .hide{
+        /*display: none;
+        position: absolute;*/
+        background-color: #21E7F7;
+        width: 100px;
+        height: 170px;
+        transform: translateX(16.2cm);
+    }  
+}
+
+@media screen and (max-width: 450){
+    legend{
+        font-size: 24px;
+        font-weight: bold;
+        margin: 0% 0%;
+    }
+}

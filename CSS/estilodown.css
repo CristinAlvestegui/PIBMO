@@ -227,27 +227,6 @@ section {
   text-decoration: none;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*Estilos para Footer */
 .footer-distributed{
 	background: #666;
@@ -351,3 +330,69 @@ section {
 	}
 }
 /*FIM do estilos para Footer */
+
+/*Estilo para site responsivo */
+
+@media screen and (max-width: 991px){
+
+    .hide{
+        display: none;
+        position: absolute;
+        background-color: #21E7F7;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        width: 100px;
+        height: 170px;
+        margin-top: 0cm;
+        z-index: 1;
+        transform: translateX(17.7cm);
+    }
+    fieldset{
+        background-color: #336c5e;
+        width: 80%;
+        border: none;
+        border-radius: 50px;
+        margin: 10% auto;
+        text-align: left;
+        color: #f8fdae ;
+    }
+
+    #fielDown{
+        background-color:#06f7ba;
+        border-radius: 0;
+        height: 145px;
+        width: 300px;
+        padding-top: 25px;
+        margin-left: 0;
+        margin-top: -45px;
+    }
+}
+
+@media screen and(max-width: 930px){
+    fieldset{
+        background-color: #336c5e;
+        width: 80%;
+        border: none;
+        border-radius: 50px;
+        margin: 10% auto;
+        text-align: left;
+        color: #f8fdae ;
+    }
+
+    #fielDown{
+        background-color:#06f7ba;
+        border-radius: 0;
+        height: 120px;
+        width: 250px;
+        padding-top: 25px;
+        margin-right: 2%;
+        margin-top: -45px;
+    }
+
+    #fotoDown{
+        float: right;
+        position: relative;
+        transform: translateX(10px);
+        margin-right: 2%;
+        height: 10px;
+    }
+}
