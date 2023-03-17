@@ -136,7 +136,7 @@
                     <img width="55px" src="../fotos/icones/bmo/256px.png"><span class="pdescri"><p>macos</p></span><!--em desenvolvimento, o link não é funcional-->
                     <img width="45px" src="../fotos/icones/iconWindows.png"><span class="pdescri"><p>Windows</p></span>
                     <img width="45px" src="../fotos/icones/iconLinux.png"><span class="pdescri"><p>Linux/Unix</p></span><!--em desenvolvimento, o link não é funcional-->
-                    <button>Abaixar</button>
+                    <button>Baixar</button>
                 </fieldset>
                 <img id="fotoDown" height="300px" src="../fotos/bmofofo.jpg">
             </fieldset>

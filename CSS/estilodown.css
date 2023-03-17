@@ -395,4 +395,24 @@ section {
         margin-right: 2%;
         height: 10px;
     }
+
+    @media screen and(max-width: 790px){
+        #fielDown{
+            background-color:#06f7ba;
+            border-radius: 0;
+            height: 260px;
+            width: 200px;
+            padding-top: 25px;
+            margin-right: 2%;
+            margin-top: -45px;
+        }
+    
+        #fotoDown{
+            float: right;
+            position: relative;
+            transform: translateX(15px);
+            margin-right: 2%;
+            height: 10px;
+        }
+    }
 }

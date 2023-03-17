@@ -7,10 +7,10 @@
 
     class Inserir{
         
-        public function cadastrar(Conexao $conex, string $CPF, string $nome, string $usuario, string $senha, string $email, ){
+        public function cadastrar(Conexao $conex, string $CPF, string $nome, string $usuario, string $senha, string $email, string $dataNasci){
             try{
                 $conn = $conex->conectar();
-                $sql  = "insert into cadastro (CPF, nome, usuario, senha, email) values ($CPF, $nome, $usuario, $senha, $email,)";
+                $sql  = "insert into cadastro (CPF, nome, usuario, senha, email, dataNasci) values ($CPF, $nome, $usuario, $senha, $email, $dataNasci)";
                 $result = mysqli_query($conn, $sql);
                 myslqi_close($conn);
                 if($result){
@@ -129,7 +129,7 @@
         //$dataVai = $inn-> trataData($_GET['dataNasci']);
         $dataVai = $inn-> odeioData($_GET['dataNasci']);
         //echo $dataVai;
-        echo $inn-> cadastrar($connect, $_GET['cpf'], $_GET['nome'], $_GET['usuario'], $_GET['senha'], $_GET['email'], $dataVai);
+        echo $inn-> cadastrar($connect, $_GET['cpf'], $_GET['nome'], $_GET['usuario'], $_GET['senha'], $_GET['email'], $_GET['dataNasci']);
         
     }
 ?>
