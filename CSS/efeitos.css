@@ -10,6 +10,10 @@ ul{
     background-color: #21E7F7;
     height: 60px;
     padding-top: 15px;
+    text-align:center;
+    padding: 0;
+    background-color: #21E7F7;
+    height: 60px;
 }
 
 li{
@@ -346,7 +350,7 @@ section {
 
 /*Estilos para site responsivo*/
 
-@media screen and (max-width: 900px){
+@media screen and () and(max-width: 900px){
     .hide{
         display: none;
         position: absolute;
@@ -366,31 +370,52 @@ section {
         color: #f1f1f1;
         width: 100%;
     }
-}
 
-@media screen and (max-width: 717px){
     ul{
+        width: 100%;
+    }
+}/* FIM dos estilos para tela max-width: 900px*/
+
+
+
+/*
+@media screen and (min-width: 700px){
+    
+    ul{
+        text-align: center;
+        padding: 0;
+        background-color: #21E7F7;
         height: 80px;
+        padding-top: 15px;
+        padding: 0%;
+        margin: 0%;
+        width: 100%;
+    }
+    
+    .hide{
+        transform: translateX(31cm);
     }
 
-    li{
-        margin: 2%;
-    }
+    .Example-btn5{
+        width: 180px;
+        }
 
     .Example-btn5:hover{ 
-        transition : 999ms;padding: 10px 60px;transform : translateY(-10px);background: linear-gradient(90deg, #21e7f7 0%, #ffe739 100%);color: #deffef;border: solid 2px #deffef;
+        transition : 999ms;padding: 10px 50px;transform : translateY(-10px);background: linear-gradient(90deg, #21e7f7 0%, #ffe739 100%);color: #deffef;border: solid 2px #deffef;
     }
 
-    .hide{
-        transform: translateX(1cm);
+    .banner{
+        width: 190px;            
     }
-}
 
-@media screen and (max-width: 450px){
+}/* FIM dos estilos para tela max-width: 784px
+
+@media screen and (max-width: 700px){
     ul{
         text-align: center;
         background-color: #21E7F7;
         height: 80px;
+        width: 100%;
     }
 
     #titulos{
@@ -427,7 +452,7 @@ section {
         color: #ffffff; 
         border: none;
         height: 120%;
-        transition : 999ms;padding: 10px 50px;transform : translateY(-10px);background: linear-gradient(90deg, #21e7f7 0%, #ffe739 100%);color: #deffef;border: solid 2px #deffef;
+        transition : 999ms;padding: 10px 40px;transform : translateY(-10px);background: linear-gradient(90deg, #21e7f7 0%, #ffe739 100%);color: #deffef;border: solid 2px #deffef;
     }
 
     .banner{
@@ -441,4 +466,5 @@ section {
     li{
         margin: 1%;
     }
-}
+}/* FIM dos estilos para tela max-width: 700px*/
+
