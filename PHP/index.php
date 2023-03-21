@@ -46,20 +46,11 @@
 
             <nav>
                 <ul>
-                    <li><a href="index.php">Inicio</a></li>
-                    <li><a href="index.php#produtos">Produtos</a></li>
-                    <li><a href="index.php#downloads">Downloads</a></li>
+                    <li><a href="Index.php">Inicio</a></li>
+                    <li><a href="Index.php#produtos">Produtos</a></li>
+                    <li><a href="Index.php#downloads">Downloads</a></li>
                     <li><a href="https://asvbmo.azurewebsites.net/">News</a></li>
                     <li><a href="https://asvbmo.azurewebsites.net/docs">Sobre</a></li><!--Página de Wordpress--> 
-                    <li class="dropLogin">
-                        <a href="../PHP/Modelo/DAO/Login.php">Entrar</a>
-                        <ul class="hide">
-                            <li><a href="#">Perfil</a></li>
-                            <li><a href="#">Suporte</a></li>
-                            <li><a href="#">Alterar</a></li>
-                            <li><a href="index.php">Sair</a></li><!--aqui vamos vamos sair da sessão de login-->
-                        </ul>
-                    </li>   
                 </ul>
             </nav>
         </header>
@@ -86,100 +77,120 @@
         <!--Fim do div de produtos-->
 
         <div id="free"> 
-            <a href="downloads.html"><h3>Teste gratis por 7 dias !!!</h3> </a>
+            <a href="Modelo/Cadastro.php"><h3>Teste gratis por 7 dias !!!</h3> </a>
         </div>
         <!--Fim do div de teste gratis-->
 
-        <div id="news">
+        <div id="comandos">
 
-            <h3>Atualizações</h3>
-            <h4>Patch: 0.1</h4>
-            <p>0.1: Correção de BUGS, estabilidade e reconhecimento de voz do aplicativo melhorado.</p>
+            <h1>Manual de Instruções</h1>
+            <div id="listaCo">
+                <p>1. Abra o arquivo .exe</p><br>
+                <p>2. Para funcionamento feche a janela</p><br>
+                <p>3. Toda vez que for falar com BMO aperte (Ctrl+Alt+M)</p><br>
+                <p>4. Funções:</p>
+            </div>
+            <div id="web">
+                <h5>WEB</h5>
+                <p class="leer">YOUTUBE: ('pesquise no youtube por'(O QUE VOCÊ QUER QUE PESQUISE')<br>
 
-             <!--Tabela de detalhes de lançamento-->
-             <table>
-                <thead>
-                    <tr>
-                        <th>Lançamento</th>
-                        <th>Versão</th>
-                        <th>S.O.</th>
-                        <th>Popularidade</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>15/09/2022</td>
-                        <td>0.1</td>
-                        <td>Windows 10</td>
-                        <td>*</td>
-                    </tr>
-                    <tr>
-                        <td>30/11/2022</td>
-                        <td>0.2</td>
-                        <td>Windows 10</td>
-                        <td>**</td>
-                    </tr>
-                </tbody>
-            </table>
-            <!--FIM da Tabela de detalhes de lançamento-->
+                    GOOGLE: ('PROCURA POR(O QUE VOCÊ QUER QUE PESQUISE')<br>
+
+                    NAVEGADOR: ('abrir o navegador', 'abrir navegador', 'abre o navegador', 'abre navegador')
+
+                    WHATSAPP: ('abrir whatsapp')</p>
+            </div>
+            <div id="Syste">
+                <h5>SISTEMA</h5>
+                <p class="leer">
+                    USER: ('nome de usuário')
+                    DOCUMENTOS: ('abrir documentos', 'abre documentos', 'abre diretório de documentos', 
+                    'abrir diretório de documentos','abrir o diretório de documentos', 
+                    'abre o diretório de documentos')<br>
+
+                    DOWNLOADS:  ('abrir downloads', 'abre downloads', 'abre diretório de downloads',
+                    'abrir diretório de downloads','abrir o diretório de downloads', 
+                    'abre o diretório de downloads')<br>
+
+                    MUSICAS:    ('abrir músicas', 'abrir diretório de músicas', 'abre músicas', 
+                    'abre diretório de músicas','abre o diretório de músicas',
+                    'abrir o diretório de músicas')<br>
+
+                    VIDEOS:     ('abre vídeos', 'abrir vídeos','abre diretório de vídeos', 
+                    'abrir diretório de vídeos','abrir o diretório de vídeos', 
+                    'abre o diretório de vídeos')<br>
+
+                    FOTOS:      ('abrir fotos', 'abre fotos', 'abrir diretório de fotos', 
+                    'abre diretório de fotos','abre o diretório de fotos', 
+                    'abrir o diretório de fotos')<br>
+
+                    HORAS:('que horas são', 'qual o horário de agora', 'qual o horário de hoje', 
+                    'horas por favor')<br>
+
+                    DATA:       ('que dia é hoje', 'qual dia é hoje', 'hoje é que dia')<br>
+
+                    DATA E HORA:('qual dia e horário de hoje', 'qual dia e horário', 'dia e horário de hoje', 
+                    'data de hoje e horário', 'data e horário de hoje')<br>
+
+                    TEMPERATURA:('qual a temperatura de hoje', 'qual temperatura', 'temperatura de hoje')<br>
+
+                    DISCO LOCAL C: ('abra o disco local c', 'abrir disco local c')
+                </p>
+            </div>
+            <div id="BMO">
+                <h5>BMO</h5>
+                <p class="leer">
+                    OI = ('olá BMO', 'eai BMO', 'salve BMO', 'oi BMO', 'ei BMO')
+
+                    TCHAU = ('falou', 'até mais', 'valeu', 'obrigado', 'tchau')        
+                </p>
+            </div>
         </div>
 
-        <div id="free"> 
-            <a href="downloads.html"><h3>Teste gratis por 7 dias !!!</h3> </a>
-        </div>
 
         <div id="downloads">
 
             <fieldset><!--Verder oscuro-->
                 <h4 class="tituDown">Downloads</h4>
                 <fieldset id="fielDown">
-                    <img width="55px" src="../fotos/icones/bmo/256px.png"><span class="pdescri"><p>macos</p></span><!--em desenvolvimento, o link não é funcional-->
-                    <img width="45px" src="../fotos/icones/iconWindows.png"><span class="pdescri"><p>Windows</p></span>
-                    <img width="45px" src="../fotos/icones/iconLinux.png"><span class="pdescri"><p>Linux/Unix</p></span><!--em desenvolvimento, o link não é funcional-->
+                    <img width="55px" src="../fotos/icones/bmo/256px.png"><span class="pdescri"><a href="#"><p>macos</p></a></span><!--em desenvolvimento, o link não é funcional-->
+                    <img width="45px" src="../fotos/icones/iconWindows.png"><span class="pdescri"><a href="#"><p>Windows</p></a></span>
+                    <img width="45px" src="../fotos/icones/iconLinux.png"><span class="pdescri"><a href="#"><p>Linux/Unix</p></a></span><!--em desenvolvimento, o link não é funcional-->
                     <button>Baixar</button>
                 </fieldset>
                 <img id="fotoDown" height="300px" src="../fotos/bmofofo.jpg">
             </fieldset>
-                 <!--Foto BEm GRande!! do BMO! na tela vai estar mostrando a ultima versão, como botão para abixar para Windows-->
             
-           <div id="free"> 
-            <a href="downloads.html"><h3>Teste gratis por 7 dias !!!</h3> </a>
+            
+            <!--Foto BEm GRande!! do BMO! na tela vai estar mostrando a ultima versão, como botão para abixar para Windows-->
+        </div><!--Fim da div para Downloads-->
+
+        <div id="detalhes">
+            <h4 id="tituDeta">Detalhes:</h4>
+            <div>
+                <p id="textoDeta">
+                    <img id="d3Bmo" src="../fotos/bmo3d.jpg" width="290">
+                    ASV BMO
+                    Está aqui para ajudar você! Para jogar video Games,🎮
+                    assistir filmes!🎥 escutar música!🎼
+                    E muitas outras coisas mias que podem fazer juntos!💗
+                    Esperamos que este programa simule uma interação 
+                    (mesmo que um pouco limitada) divertida e empolgante aos seus fãs com o personagem BMO
+                    O ASV BMO é um assistente virtual com temática do personagem 
+                    de A Hora de Aventura. Temos como objetivo oferecer uma experiência de imersão e 
+                    diversão com o personagem.
+                    Nós os alunos da turma TI13N do Senac, criamos este projeto utilizando as bibliotecas de 
+                    Python, linguagens de HTML e entre outros para entregar este lindo projeto de PI.
+                    Esperamos que todos tenham uma boa degusta do aplicativo e contamos com seu feedback 
+                    para melhorar nossa aplicação!                
+                </p>
             </div>
-
-            <section>
-                <span class="block">
-                    <a class="ablock" href="#detalhes">Detalhes
-                        <p class="pdetalhes">ASV BMO
-                            Está aqui para ajudar você! Para jogar video Games,🎮<br>  
-                            assistir filmes!🎥 escutar música!🎼
-                            E muitas outras coisas mias que podem fazer juntos!💗
-                            Esperamos que este programa simule uma interação 
-                            (mesmo que um pouco limitada) divertida e empolgante aos seus fãs com o personagem BMO
-                            O ASV BMO é um assistente virtual com temática do personagem 
-                            de A Hora de Aventura. Temos como objetivo oferecer uma experiência de imersão e 
-                            diversão com o personagem.
-                            Nós os alunos da turma TI13N do Senac, criamos este projeto utilizando as bibliotecas de 
-                            Python, linguagens de HTML e entre outros para entregar este lindo projeto de PI.
-                            Esperamos que todos tenham uma boa degusta do aplicativo e contamos com seu feedback 
-                            para melhorar nossa aplicação!
-                        </p>
-                    </a>
-                </span><br>
-                
-    
-                <span class="block">
-                    <a class="ablock" href="#sistema">Requisitos do Sistema</a>
-                </span>
-                <span class="block">
-                    <a class="ablock" href="#instrucao">Manual de Instalação</a>
-                </span>
-            </section>
+            
         </div>
-
     </body>
 
     <!--Footer-->
-    <a href="#home"><section>Home</section></a>
+    <a href="#start"><section>Home</section></a>
     <footer class="footer-distributed">
         <div class="foot">
             <div class="footer-left">

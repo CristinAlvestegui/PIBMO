@@ -5,9 +5,8 @@
 
         public function conectar(){
             try{
-                $conn = mysqli_connect('localhost', 'root', '', "BMO");
+                $conn = mysqli_connect('localhost', 'root', '', 'ASVBMO');
                 if($conn){
-                    echo "<br> Conexão feita com sucesso!";
                     return $conn;
                 }
                 echo "<br>Não entramos! :(";

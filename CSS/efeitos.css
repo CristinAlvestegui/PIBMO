@@ -14,6 +14,8 @@ ul{
     padding: 0;
     background-color: #21E7F7;
     height: 60px;
+    margin-top: 0;
+    margin-bottom: 0;
 }
 
 li{
@@ -87,6 +89,7 @@ a{
     right: 0;
     bottom: 0;
     width: 100%;
+    margin-bottom: -340px;
 }
 
 h1{
@@ -245,6 +248,61 @@ section {
   text-decoration: none;
 }
 
+/* Efeitos para parte de comandos*/
+
+#comandos{
+    background-image: url(../fotos/manualBmo.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: #7bd4b4;
+    width: 75%;
+    margin: 0% auto;
+    border-radius: 25px;
+    padding-bottom: 5px;
+}
+#listaCo{
+    margin: 2% 20%;
+    width: 100%;
+}
+
+#web, #Syste, #BMO{
+    margin: 2% auto;
+    width: 50%;
+    background-color: white;
+    opacity: 0.6;
+    padding: 10px;
+    white-space: normal
+}
+
+/* Fim de efeitos para parte de comandos*/
+
+
+/*Efeitos para div de Detalhes*/
+
+#detalhes{
+    background-color: #21E7F7;
+    margin: 2% auto;
+    text-align: right;
+    text-align-last: right;
+    
+    width: 70%;
+    /*height: 500px;*/
+    white-space: normal;
+    padding: 5%;
+    border-radius: 15px;
+}
+
+#textoDeta{
+    margin-top: -150px;
+}
+/*Efeitos para fotos dentro da div detalhes*/
+
+img #d3Bmo{
+    margin-top: 0;
+    width: 90px;
+    vertical-align: sub;
+}
+
 .footer-distributed{
 	background: #666;
 	box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.12);
@@ -350,7 +408,7 @@ section {
 
 /*Estilos para site responsivo*/
 
-@media screen and () and(max-width: 900px){
+@media screen and (min-width: 600px) and(max-width: 900px){
     .hide{
         display: none;
         position: absolute;
