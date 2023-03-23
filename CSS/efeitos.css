@@ -283,25 +283,27 @@ section {
     background-color: #21E7F7;
     margin: 2% auto;
     text-align: right;
-    text-align-last: right;
-    
+    text-align-last: left;
     width: 70%;
-    /*height: 500px;*/
-    white-space: normal;
+    height: 500px;
+    overflow: auto;
     padding: 5%;
     border-radius: 15px;
 }
 
 #textoDeta{
-    margin-top: -150px;
+    text-align: justify;
+    
 }
-/*Efeitos para fotos dentro da div detalhes*/
 
-img #d3Bmo{
+#d3Bmo{
     margin-top: 0;
-    width: 90px;
-    vertical-align: sub;
+    margin-right: 30px;
+    width: 390px;
+    float: left;
 }
+
+/*Fim dos efeitos para div detalhes*/
 
 .footer-distributed{
 	background: #666;
