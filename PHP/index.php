@@ -83,24 +83,24 @@
 
         <div id="comandos">
 
+            
+            <div id="Syste">
             <h1>Manual de Instruções</h1>
-            <div id="listaCo">
                 <p>1. Abra o arquivo .exe</p><br>
-                <p>2. Para funcionamento feche a janela</p><br>
-                <p>3. Toda vez que for falar com BMO aperte (Ctrl+Alt+M)</p><br>
-                <p>4. Funções:</p>
-            </div>
-            <div id="web">
+                <p>2. Toda vez que for falar com BMO aperte (Ctrl+Alt+M)</p><br>
+                <p>3. Funções:</p>
+
+
                 <h5>WEB</h5>
-                <p class="leer">YOUTUBE: ('pesquise no youtube por'(O QUE VOCÊ QUER QUE PESQUISE')<br>
+                <p class="leer">
+                    YOUTUBE: ('pesquise no youtube por'(O QUE VOCÊ QUER QUE PESQUISE')<br>
 
                     GOOGLE: ('PROCURA POR(O QUE VOCÊ QUER QUE PESQUISE')<br>
 
                     NAVEGADOR: ('abrir o navegador', 'abrir navegador', 'abre o navegador', 'abre navegador')
 
                     WHATSAPP: ('abrir whatsapp')</p>
-            </div>
-            <div id="Syste">
+
                 <h5>SISTEMA</h5>
                 <p class="leer">
                     USER: ('nome de usuário')
@@ -136,8 +136,7 @@
 
                     DISCO LOCAL C: ('abra o disco local c', 'abrir disco local c')
                 </p>
-            </div>
-            <div id="BMO">
+
                 <h5>BMO</h5>
                 <p class="leer">
                     OI = ('olá BMO', 'eai BMO', 'salve BMO', 'oi BMO', 'ei BMO')
