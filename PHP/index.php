@@ -166,8 +166,8 @@
 
         <div id="detalhes">
             <h4 id="tituDeta">Detalhes:</h4>
-            <div>
-                <p id="textoDeta">
+            <div id="textoDeta">
+                <p>
                     <img id="d3Bmo" src="../fotos/bmo3d.jpg" width="290">
                     ASV BMO
                     Está aqui para ajudar você! Para jogar video Games,🎮
